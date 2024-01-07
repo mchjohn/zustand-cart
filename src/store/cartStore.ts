@@ -7,12 +7,12 @@ interface CartStore {
   cart: Product[],
   availableProducts: Product[],
   addToCart: (product: Product) => void,
-  removeFromCart: (product: Product) => void,
+  removeFromCart: (id: string) => void,
 }
 
 export const useCartStore = create<CartStore>((set) => ({
   cart: [] as Product[],
   availableProducts: products,
   addToCart: (product) => set((state) => ({ cart: state.cart = [...state.cart, product] })),
-  removeFromCart: (product: Product) => set((state) => ({ cart: state.cart.filter((p) => p.id !== product.id) })),
+  removeFromCart: (id: string) => set((state) => ({ cart: state.cart.filter((p) => p.id !== id) })),
 }))

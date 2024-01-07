@@ -23,8 +23,13 @@ export const styles = StyleSheet.create({
   },
   quantity: {
     gap: 8,
-    marginTop: 16,
     alignItems: 'center',
     flexDirection: 'row',
   },
+  actions: {
+    marginTop: 16,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  }
 })
