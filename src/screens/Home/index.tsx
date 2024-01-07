@@ -1,12 +1,15 @@
 import { FlatList, View } from 'react-native'
 
-import { products } from '../../mock/products'
+import { useCartStore } from '../../store/cartStore'
 
 import { ProductCard } from '../../components/ProductCard'
 
 import { styles } from './styles'
+import { CartButton } from '../../components/CartButton';
 
 export function Home() {
+  const products = useCartStore(state => state.availableProducts);
+
   return (
     <View style={styles.container}>
       <FlatList
@@ -17,6 +20,8 @@ export function Home() {
         columnWrapperStyle={styles.productList}
         showsVerticalScrollIndicator={false}
       />
+
+      <CartButton />
     </View>
   )
 }
