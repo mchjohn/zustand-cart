@@ -6,6 +6,7 @@ import { useCartStore } from '../../store/cartStore';
 
 import { ProductDetailsProps } from '../../navigation/StackNavigation'
 
+import { CartButton } from '../../components/CartButton';
 import { QuantityButton } from '../../components/QuantityButton';
 
 import { styles } from './styles'
@@ -52,6 +53,8 @@ export function ProductDetails() {
           <Text style={styles.buttonText}>Adicionar ao carrinho</Text>
         </TouchableOpacity>
       </View>
+
+      <CartButton />
     </View>
   )
 }

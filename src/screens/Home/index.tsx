@@ -2,10 +2,10 @@ import { FlatList, View } from 'react-native'
 
 import { useCartStore } from '../../store/cartStore'
 
+import { CartButton } from '../../components/CartButton';
 import { ProductCard } from '../../components/ProductCard'
 
 import { styles } from './styles'
-import { CartButton } from '../../components/CartButton';
 
 export function Home() {
   const products = useCartStore(state => state.availableProducts);
